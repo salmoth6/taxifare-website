@@ -34,6 +34,10 @@ passenger_count = 2
 
 url = 'https://taxifare.lewagon.ai/predict'
 
+print("date ", datetime.date(2019, 7, 6))
+print(type (datetime.date(2019, 7, 6)))
+
+
 # 2. Let's build a dictionary containing the parameters for our API...
 params=dict(pickup_datetime=pickup_datetime,
             pickup_longitude=pickup_longitude,

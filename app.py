@@ -1,6 +1,5 @@
 import streamlit as st
 import datetime
-import numpy as np
 import requests
 
 '''
@@ -26,12 +25,14 @@ import requests
 # '''
 d = st.date_input('pickup date', datetime.date(2012, 10, 6))
 t = st.time_input('pickup time', datetime.time(12, 10))
+# st.write(d, str(t))
+
 pickup_datetime=str(d)+" "+str(t)
 st.write(pickup_datetime)
-pickup_longitude=st.number_input('pickup_longitude',40.7614327)
-pickup_latitude=st.number_input('pickup_latitude',-73.9798156)
-dropoff_longitude=st.number_input('dropoff_longitude',40.651311)
-dropoff_latitude=st.number_input('dropoff_latitude',-73.8803331)
+pickup_longitude=st.slider('pickup_longitude',40.5, 40.9,40.7614327)
+pickup_latitude=st.slider('pickup_latitude',-74.3, -73.7,-73.9798156)
+dropoff_longitude=st.slider('dropoff_longitude',40.5, 40.9,40.651311)
+dropoff_latitude=st.slider('dropoff_latitude',-74.3, -73.7,-73.8803331)
 passenger_count = st.slider('passenger count' , 1, 10, 2)
 
 
